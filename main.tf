@@ -21,9 +21,9 @@ resource "clickhouse_service" "this" {
 
 resource "clickhouse_private_endpoint_registration" "this" {
   cloud_provider = var.cloud_provider
-  id = var.name
-  region = var.region
-  description = "Private endpoint for ${var.name} cluster"
+  id             = var.name
+  region         = var.region
+  description    = "Private endpoint for ${var.name} cluster"
 }
 
 resource "aws_secretsmanager_secret" "this" {
